@@ -1,0 +1,9 @@
+# Keep source text portable and preserve binary manuscript figures.
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+
+# Exported files must retain the byte-level hashes in the export manifest.
+evidence/** -text
+figures/** -text
+generated/** -text

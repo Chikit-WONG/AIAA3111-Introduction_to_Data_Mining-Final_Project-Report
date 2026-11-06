@@ -1,0 +1,19 @@
+
+\section{Discussion, Limitations and Conclusion}
+\subsection{What the findings establish}
+Under the declared policy, \AllMonthsRules{} of \SelectedRules{} frozen rules persist in every held-out month, with \MeanRetention{} mean retention. RQ1 has a qualified positive answer. RQ2 reveals a quantity--reliability trade-off mediated by evidence availability; RQ3 confirms equivalent bounded itemsets with implementation-dependent resource costs. These findings characterize this retailer and protocol.
+
+Equation~\ref{eq:decomposition} distinguishes why cohorts fail. At 0.5\% discovery support and 50\% confidence, only 19.9\% of test rule-months are evaluable and 63.2\% of those pass, giving 12.6\% overall retention. For the primary cohort, coverage of 99.3\% and conditional retention of 79.8\% yield 79.2\% overall. Reporting conditional success alone conceals most low-support rules' lack of monthly evidence.
+
+\subsection{Threats to validity and decision relevance}
+\textbf{Policy dependence.} The 20-rule floor and the evaluation thresholds express a coverage objective, not a statistical optimum. A post-hoc diagnostic holds all 71 rules and every other criterion fixed: changing the monthly confidence gate from 50\% to 45\% raises retention from 225/284 (79.2\%) to 254/284 (89.4\%); raising it to 55\% lowers retention to 187/284 (65.8\%). These alternatives do not replace the primary result. They show that stability must be interpreted relative to a declared operational tolerance.
+
+\textbf{Dependence and multiplicity.} The 71 rules involve only 51 distinct union itemsets, 49 products and 26 consequents; 18 rules share consequent \texttt{85099B}. Counting rules therefore does not count independent findings or distinct recommendation opportunities. Shared products, shared orders and repeated customers also make the 284 rule-months dependent. The case-study intervals are nominal descriptions, and no claim treats these observations as independent replications. A confirmatory discovery study would require an explicit multiplicity-aware inferential design~\citep{hamalainen2019}.
+
+\textbf{Population and measurement.} Customer-ID and basket-size restrictions reduce retention to \KnownRetention{} and \SmallBasketRetention{}, respectively. These overlapping subsets change the order population and cannot isolate a causal effect of missingness or basket size. Retaining missing-ID orders is justified for invoice-level co-occurrence, but may not suit a customer-level recommender. Excluding cancellations without netting returns, treating quantity as binary presence and imposing short, single-consequent rules further delimit what is measured. None of the reported associations establishes sales uplift.
+
+\textbf{Temporal and selection scope.} Four months from one retailer cannot establish annual seasonality or long-term transportability. Validation chooses among nine settings using only two months; the chosen cohort can remain specific to that interval even without test leakage. Rolling cohorts change both their membership and their denominators, so their retained fractions do not establish a paired improvement. Their larger rule counts also say little about catalog coverage or commercial value.
+
+\subsection{Next steps and conclusion}
+Further evaluation should predefine utility and coverage, add retailers and longer histories, and record inventory, promotions and returns. Resampling must preserve customer or temporal dependence; revenue claims require prospective interventions. These results support local screening with explicit observability checks and transparent denominators.
+\label{maintextend}

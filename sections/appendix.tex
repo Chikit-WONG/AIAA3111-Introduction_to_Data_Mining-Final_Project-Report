@@ -1,0 +1,65 @@
+\section{Complete grid and reproducibility}
+\begin{table}[!htbp]
+\centering\small
+\input{generated/grid.tex}
+\caption{Discovery grid, mean retention and test evaluability. ``Validation'' and ``Test'' are retention under the common monthly thresholds. The 14-rule row is below the primary selection floor.}
+\end{table}
+
+\subsection*{Reproducing the analysis}
+In the code repository, create a Python 3.11 virtual environment, install \texttt{requirements-lock.txt}, then run \texttt{python run.py all}. This downloads or verifies the public source, rebuilds baskets, benchmarks both algorithms, performs validation-only selection and held-out evaluation, writes descriptive supplements, renders figures and runs independent numerical verification. Run \texttt{python -m pytest -q} for the small-data and boundary-case tests. The full dataset remains locally available; the submitted package supplies the official download command and source checksum instead of embedding the workbook.
+
+The independent numerical check samples 40 selected discovery rules and their 160 test rule-months, directly scanning baskets to recompute counts and metrics. This deterministic sample (seed 3111) does not independently audit every exported number. Integrity checks reconcile cleaning counts, cohort sizes, hashes and algorithm signatures. Tests use exhaustive enumeration on a tiny dataset and hand-computed rules to cover denominator preservation, missing antecedents, small samples, time boundaries and selection isolation.
+
+\textbf{Execution environment.} Table~\ref{tab:environment} summarizes \nolinkurl{results/environment.json}. Benchmark limits are configured caps, not measured usage; the dependency lock also records transitive dependencies.
+\begin{table}[!htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Component & Recorded value\\
+\midrule
+Runtime & Python 3.11.7; Windows build 26200; 64-bit process\\
+Compute & Ryzen 9 7940H; 8 physical cores, 16 logical processors; 63.22 GiB RAM\\
+Numerical stack & NumPy 2.4.6; pandas 3.1.1; SciPy 1.17.1; MLxtend 0.25.0\\
+Rendering and monitoring & Matplotlib 3.11.2; psutil 7.2.2; openpyxl 3.1.5\\
+Benchmark policy & 3 repetitions per algorithm/support; per-worker limits: 600 s and 12 GiB\\
+\bottomrule
+\end{tabularx}
+\caption{Recorded execution environment. Timing and peak memory remain machine-dependent; exact package versions support numerical reproduction.}
+\label{tab:environment}
+\end{table}
+
+\subsection*{Evidence locations}
+The code repository's \texttt{results/tables} contains the audit, monthly counts, benchmarks, threshold grid, selected rules, monthly evaluations, persistence and robustness checks.
+
+The configuration and source hash are stored in \texttt{results/protocol.json}, and the pre-test decision in \texttt{results/selection.json}. Post-hoc settings are in \texttt{results/supplemental\_protocol.json}.
+
+This Overleaf repository contains a checked evidence snapshot and export manifest. Running \texttt{python run.py export-report} in the adjacent code repository refreshes \texttt{generated/}, \texttt{figures/} and \texttt{evidence/}; it preserves the handwritten \texttt{sections/} files. Therefore, changes to experiments must be followed by a narrative review, not just a figure refresh. In Overleaf, select \texttt{main.tex} as the main document and compile with pdfLaTeX or XeLaTeX. A local Tectonic build is also supported for preview verification.
+
+\section{Cleaning audit and additional diagnostics}
+\label{app:audit}
+\begin{table}[!htbp]
+\centering\small
+\input{generated/cleaning.tex}
+\caption{Sequential cleaning across all countries. Each removed record is counted only at its first exclusion; removals reconcile exactly with the retained total.}
+\label{tab:cleaning}
+\end{table}
+
+The source's missing-value summary is checked against the actual workbook: 135,080 customer identifiers and 1,454 descriptions are absent before cleaning. Missing descriptions do not create a new product identity. Explicit non-product exclusions are recorded in \texttt{configs/experiment.json}; an audit table preserves unusual retained codes. Dates are used as recorded without undocumented timezone conversion. All 42 timestamp anomalies stay within one day and one minute, and no retained invoice spans countries.
+
+\subsection*{Report-revision diagnostics}
+\texttt{results/report\_diagnostics.json} records two descriptive checks added during manuscript revision. Neither changes discovery, the validation-selected cohort or the primary monthly criteria. First, product and union-itemset counts quantify overlap within the frozen rule set. Second, confidence-gate sensitivity recomputes retention on the existing test counts at 45\%, 50\% and 55\%, holding support, lift, evidence requirements and all 71 rule IDs fixed. The 50\% row must reproduce the original retained indicator for every rule-month before the diagnostic is exported.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Monthly confidence gate & Retained rule-months & Retention\\
+\midrule
+45\% (post-hoc) & 254/284 & 89.4\%\\
+50\% (primary) & 225/284 & 79.2\%\\
+55\% (post-hoc) & 187/284 & 65.8\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+The comparison measures policy sensitivity on the same observed counts; it is not a confidence interval, independent replication or retrospective parameter selection. The observed confidence lies between 45\% and 55\% in 69 of 284 rule-months, illustrating the relevance of the chosen gate. Some observations can also fail support, lift or count requirements, so proximity to the confidence gate alone does not determine retention.
+
+Figures use vector PDFs with SVG sources and PNG previews. Export checksums connect each asset and evidence file to the code repository.

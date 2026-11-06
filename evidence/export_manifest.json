@@ -1,0 +1,266 @@
+{
+  "code_repository": "https://github.com/Chikit-WONG/AIAA3111-Introduction_to_Data_Mining-Final_Project",
+  "configuration_sha256": "ff1cb77124324199ec36946a45d4b9c67002df5fb043c0df0f057edb885fb9e3",
+  "files": [
+    {
+      "file": "data/source_manifest.json",
+      "sha256": "516f06084ff4dc2dc661a8bac26bb495162ee9d35297e8c2fd1fcf9545c105b1"
+    },
+    {
+      "file": "results/summary.json",
+      "sha256": "fa2d6e5d660beb8bdf7a1bd7598a5a5e3649d2c25681177f394410997e37d643"
+    },
+    {
+      "file": "results/protocol.json",
+      "sha256": "ef3a9f4509879c61fec1edc5b942594790866b6334c2842d7f13259a90c3bc52"
+    },
+    {
+      "file": "results/selection.json",
+      "sha256": "07a41477fa885dd31c4d57eaa8b2d8d4899cfbb62e88d3c5d7aaad3df4ae68c1"
+    },
+    {
+      "file": "results/verification.json",
+      "sha256": "6db50848d9f414c5d1d0f54f30fe84769e4893a72316107bf86d72f210d5ab5f"
+    },
+    {
+      "file": "results/supplemental_protocol.json",
+      "sha256": "376c3858532c35114263692770bddea0a69f384229f64b5b38979fe041ad54e5"
+    },
+    {
+      "file": "results/data_profile.json",
+      "sha256": "c53a360ccef5dd65a4cb2344514e1119252f95dea61ab3f92bca58c4a0cea2ca"
+    },
+    {
+      "file": "results/environment.json",
+      "sha256": "9a5b19116bf6bcdc74a43a556753e9313fdfe17e7147b99c43807f3250630e0a"
+    },
+    {
+      "file": "results/tables/basket_size_sensitivity.csv",
+      "sha256": "ea8c9d39b01da4109c6413f6313fbc2eec65ac237a2fb6793d2b7230314625e6"
+    },
+    {
+      "file": "results/tables/benchmark.csv",
+      "sha256": "60eef3b00e55cb429633be9678660dcc144f80b29359874c1260b5a48678a750"
+    },
+    {
+      "file": "results/tables/case_studies.csv",
+      "sha256": "a2179beba1d4488bf8c00c39e702f1ddc1f8b5acbbec9bbbcc3b38de683974f4"
+    },
+    {
+      "file": "results/tables/cleaning_audit.csv",
+      "sha256": "fca0039973bcb426aa10ac70b0f18d0ccd08e5fee330e1a54617ba16a79752de"
+    },
+    {
+      "file": "results/tables/country_sensitivity.csv",
+      "sha256": "24c70118899047bfa9ba07f696bd724fd5993807097b96b0ebbd3180d40ea036"
+    },
+    {
+      "file": "results/tables/customer_id_basket_profile.csv",
+      "sha256": "3ca66bede47dffab99049d7f184145f7d5c1617307796aacfb23f8673c1aca25"
+    },
+    {
+      "file": "results/tables/customer_sensitivity.csv",
+      "sha256": "19ca56e36ef5addeed18aa97c5c61e1c33024382b1eb8032980b84fb117d989f"
+    },
+    {
+      "file": "results/tables/monthly_all.csv",
+      "sha256": "1277790e9ed1b16f3e444e58f19c7aec4248856eed883b263d7a9eb4aebf5c78"
+    },
+    {
+      "file": "results/tables/monthly_retention.csv",
+      "sha256": "88a727da0d4b420cead59f26d95baa185d8e7fd65978e731f96bffc7646ab680"
+    },
+    {
+      "file": "results/tables/monthly_uk.csv",
+      "sha256": "9437941c30b6c0e90ef73674af040fb896f1a8b47bf3452dfe9adbbfb3c350be"
+    },
+    {
+      "file": "results/tables/partial_month_rule_metrics.csv",
+      "sha256": "9cc641997834fd164b96be80578bbd51dc894dffa1141cd4b7235deea6e95084"
+    },
+    {
+      "file": "results/tables/pilot_benchmark.csv",
+      "sha256": "f62cef02b0316bd75a96b95bdaab894b1b93cc9651cc73e3f2d675a2c8b36782"
+    },
+    {
+      "file": "results/tables/product_labels.csv",
+      "sha256": "130be94fbb84ce7003cdde45a126247a49136d4f01c40fcefda8c78c51651999"
+    },
+    {
+      "file": "results/tables/retained_unusual_codes.csv",
+      "sha256": "dd05821f7105ed99a779c36cd7a6be40c34901d84042d08594db07ae598d28c4"
+    },
+    {
+      "file": "results/tables/retention_failure_breakdown.csv",
+      "sha256": "2003fa05c97e6c2fc23d958ac84d04f6c62b6b3c61fa91ff3ecd4b08327d7908"
+    },
+    {
+      "file": "results/tables/rolling_retention.csv",
+      "sha256": "e07d9e5529248b4072ed22e2f768fb2180575a86fa68fff4eb8833987146d0a5"
+    },
+    {
+      "file": "results/tables/rolling_rule_months.csv",
+      "sha256": "120537f3043ac46ea6cb57c2deb44b64abca07b9de887d2d6c44365f2346dc31"
+    },
+    {
+      "file": "results/tables/rule_floor_sensitivity.csv",
+      "sha256": "4f953230456f4268baefa86332dbb86f7832cee55dd52753e5e29a7cba78e99a"
+    },
+    {
+      "file": "results/tables/rule_stability.csv",
+      "sha256": "4a93673ebf8b4b1f21661e55b8bf53dcf40b1b6e5436691d08473c99fc4b8ae7"
+    },
+    {
+      "file": "results/tables/selected_rules.csv",
+      "sha256": "8802051907f0019a8e5d6645afffd53c2ac225b322262e9ec9fad9c93ae40cb5"
+    },
+    {
+      "file": "results/tables/selected_validation_rule_months.csv",
+      "sha256": "0789f2d2549c0135eb1e06666c376b27b59b64b263262868c933261189999fdd"
+    },
+    {
+      "file": "results/tables/small_basket_rule_months.csv",
+      "sha256": "8844a7f9be8a00aabc745481e1980d991d5017f7440d5cac7beb880614dddd4a"
+    },
+    {
+      "file": "results/tables/splits.csv",
+      "sha256": "b68262132a1e71cbf0e714abcdf97b1f6352decdbb583216f0373d1a57a02ae2"
+    },
+    {
+      "file": "results/tables/stability_distribution.csv",
+      "sha256": "d31fd1c787ed117bbe8744c8936e723347478407899e0085786613e96973a6fa"
+    },
+    {
+      "file": "results/tables/test_rule_months.csv",
+      "sha256": "819bfd2cd10a38b8df3661eaf51f3fe1165ba7a1cc09744a465a527135320503"
+    },
+    {
+      "file": "results/tables/threshold_evaluability.csv",
+      "sha256": "3691a61ee770cef4af6f5037f152950decfe887a5ed71d8d13f5635057aef19a"
+    },
+    {
+      "file": "results/tables/threshold_sensitivity.csv",
+      "sha256": "967764b3fb8d016f72293475235929508f8f79a69da8978d7a8646e0b911495d"
+    },
+    {
+      "file": "results/tables/validation_grid_monthly.csv",
+      "sha256": "2aea325ed34d400bc41352a884566a10157365baa95c1ffeac9e28f567405e8a"
+    },
+    {
+      "file": "results/tables/validation_selection.csv",
+      "sha256": "87f8d05946bbaa421733c6b39bb189b97b4253ae786131259b933deafd8de80d"
+    },
+    {
+      "file": "results/report_diagnostics.json",
+      "sha256": "3fff1bd4644859fb71c207e9edff175cdbe03746dc923a9373711677538eecb9"
+    },
+    {
+      "file": "results/figures/01_monthly_orders.pdf",
+      "sha256": "0f5e395320f104c362e0b0649254c9979da969dbd98edadb2e8a8cba9c40b737"
+    },
+    {
+      "file": "results/figures/01_monthly_orders.png",
+      "sha256": "22b3991f153f7659c068c3b92c53c6680f2e3ef2a1fa10304df95afe7f14567f"
+    },
+    {
+      "file": "results/figures/01_monthly_orders.svg",
+      "sha256": "d1111932b86272527858d89a987c442b53e7aef4c0a279d7383079bf239441be"
+    },
+    {
+      "file": "results/figures/02_benchmark.pdf",
+      "sha256": "fcce44c64508da1fd0474c317f4933a217aa43b4bb0613a60d707bd0fc7bf6ba"
+    },
+    {
+      "file": "results/figures/02_benchmark.png",
+      "sha256": "4e8a69db52cbc733880c24d164585af6753d4220453eacaf59d6c7107ae3d2c1"
+    },
+    {
+      "file": "results/figures/02_benchmark.svg",
+      "sha256": "d5f1f7b17f1df5e211e34b0adbd58d551c65679db3fa44617db7cece2edb98dd"
+    },
+    {
+      "file": "results/figures/03_temporal_retention.pdf",
+      "sha256": "da092fb476b3e67b8e6b183620e925a83f3cc6cc6866567318fe8d09181d249d"
+    },
+    {
+      "file": "results/figures/03_temporal_retention.png",
+      "sha256": "7659d03e1bfcd23488c059ea02af97d5525771864d5b69c7a82c9f70362d1137"
+    },
+    {
+      "file": "results/figures/03_temporal_retention.svg",
+      "sha256": "b6666e6dd794022247e870c0deb8d78750b59dce47be3101d017542c655c640a"
+    },
+    {
+      "file": "results/figures/04_threshold_sensitivity.pdf",
+      "sha256": "5e7fae990157c8643d5f3e4f51c0005f73d786790a381dfdcee4ffe9bd3e3711"
+    },
+    {
+      "file": "results/figures/04_threshold_sensitivity.png",
+      "sha256": "36f2e071d908f6bafe6d1b26459d559b0b942a73414811a6bcd2e075a1f38db1"
+    },
+    {
+      "file": "results/figures/04_threshold_sensitivity.svg",
+      "sha256": "6fb3f65ea57a805c4bba16b121464a287228e84bdc04e46225454a643465cc97"
+    },
+    {
+      "file": "results/figures/05_persistence.pdf",
+      "sha256": "b1312496efd3082a1cd5c85f80fb59a7509e759f5ec1f9bd909b0f7de9dbb683"
+    },
+    {
+      "file": "results/figures/05_persistence.png",
+      "sha256": "8f3e071f5dd9a15fe31af75e83593e5f2a767aa275f9e9bbe0f3a46de51d91bf"
+    },
+    {
+      "file": "results/figures/05_persistence.svg",
+      "sha256": "ba1a123c37569f9f9cffa3c03c43aa9cee32fed8a93a4f2ccbd2457fed3d5552"
+    },
+    {
+      "file": "results/figures/06_case_studies.pdf",
+      "sha256": "1f72766e8f88d9d3ff3b630995edf8f1a67a7a474f949373aee766869bfd99ba"
+    },
+    {
+      "file": "results/figures/06_case_studies.png",
+      "sha256": "0c2184619ca8333cdfa5ccf6f726737a749652440b8690e757cd68dcc95d5e2f"
+    },
+    {
+      "file": "results/figures/06_case_studies.svg",
+      "sha256": "299ec04d98f610a03fe766e13e4158a554fbe66aed5b3759bd5b6a7102d4c5c9"
+    },
+    {
+      "file": "results/figures/07_robustness.pdf",
+      "sha256": "19809fd10425f4619eeaef68a9dbb42548ac5f6fbbb342c9a1537cf4dd87eeef"
+    },
+    {
+      "file": "results/figures/07_robustness.png",
+      "sha256": "70c59fa139227dad30eeb30f652a7511547e02a528a486a1aba5fa568990f5a4"
+    },
+    {
+      "file": "results/figures/07_robustness.svg",
+      "sha256": "ce2aeddd319b5d24f7e5e0daf6e1c09165f749c66b5679b798a74b0df695441b"
+    },
+    {
+      "file": "results/figures/08_method_overview.pdf",
+      "sha256": "4d46cece0d2b8de42cc8b5fca6d72fe9cca196ff8856d78be3945bc2385cf5f8"
+    },
+    {
+      "file": "results/figures/08_method_overview.png",
+      "sha256": "db21079113cd4a7ea297c4a258899dace91074d04d7e7930141848e7e7978aa3"
+    },
+    {
+      "file": "results/figures/08_method_overview.svg",
+      "sha256": "f870430c1a0deb783f4d39486b9a099a39165f118630b02cb2eab22c09b29edb"
+    },
+    {
+      "file": "results/figures/09_threshold_observability.pdf",
+      "sha256": "7917ed50e143af137b0da37bce0049f8454e2e08b732d82d0ed02b9f5bd37fa4"
+    },
+    {
+      "file": "results/figures/09_threshold_observability.png",
+      "sha256": "20efec4905602b49f3449ba10cdb2b1fde5d4c5e32e6beb6989e920b7ccc6f1c"
+    },
+    {
+      "file": "results/figures/09_threshold_observability.svg",
+      "sha256": "1c5c09b97fcf9cb81b4caea65d4c4251abbb141771d9da450ad1a18fa223c22b"
+    }
+  ]
+}

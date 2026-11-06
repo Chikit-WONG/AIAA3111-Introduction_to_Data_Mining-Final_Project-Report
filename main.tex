@@ -1,14 +1,52 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=21mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage{caption}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{projectblue}{HTML}{15324F}
+\hypersetup{pdftitle={Beyond Frequent Co-Purchases},pdfauthor={AIAA3111 Group 11}}
+\graphicspath{{figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.12}
+% Let the manuscript flow continuously; figures may use the top or bottom.
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.85}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.8}
+\input{generated/results.tex}
 
-\title{AIAA3111-Introduction_to_Data_Mining-Final_Project-Report}
-\author{Chikit WONG}
-\date{November 2026}
+\title{\vspace{-1.2cm}\textbf{Beyond Frequent Co-Purchases}\\[3pt]
+\large A Study of Temporal Stability in Retail Association Rules}
+\author{\small Group 11 \quad AIAA3111 Introduction to Data Mining\\[4pt]
+\small Chi Kit WONG (50012338) \quad Yuxuan OUYANG (50013526) \quad Zhicheng SUN (50012546)}
+\date{\small November 2026}
 
 \begin{document}
-
 \maketitle
-
-\section{Introduction}
-
+\vspace{-6mm}
+\input{sections/01_introduction}
+\input{sections/02_problem_formulation}
+\input{sections/03_methodology}
+\input{sections/04_experiments}
+\input{sections/05_conclusion}
+\clearpage
+\input{sections/06_disclosures}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\clearpage
+\appendix
+\input{sections/appendix}
 \end{document}

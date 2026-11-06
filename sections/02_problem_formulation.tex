@@ -1,0 +1,51 @@
+\section{Problem Formulation}
+An observation is an invoice-level set of distinct product codes. Quantity is used to identify positive sales records, but repeated units of a product do not increase its basket membership. Let $D_t$ be the set of eligible orders in month $t$, with $N_t=|D_t|$. A rule $A\rightarrow B$ has a nonempty antecedent $A$ and a single-product consequent $B$, with $A\cap B=\varnothing$. The combined itemset contains at most three products. The arrow denotes conditional co-occurrence within an order, not purchase sequence or causation.
+
+Let $n_t(X)$ count orders containing every product in itemset $X$. We calculate
+\begin{align}
+\operatorname{support}_t(A\rightarrow B) &= \frac{n_t(A\cup B)}{N_t},\\
+\operatorname{confidence}_t(A\rightarrow B) &= \frac{n_t(A\cup B)}{n_t(A)},\\
+\operatorname{lift}_t(A\rightarrow B) &= \frac{n_t(A\cup B)N_t}{n_t(A)n_t(B)}.
+\end{align}
+Confidence describes the fraction of antecedent-containing orders also containing the consequent. Lift adjusts that fraction for the consequent's prevalence; a lift above one indicates positive co-occurrence relative to independence. Neither metric is a causal estimate.
+
+\subsection{A fixed definition of retention}
+All discovery configurations use the same monthly evaluation criteria:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Requirement & Monthly threshold\\
+\midrule
+Support & $\geq 0.005$\\
+Confidence & $\geq 0.50$\\
+Lift & $\geq 1.20$\\
+Antecedent count & $\geq 20$ orders\\
+\bottomrule
+\end{tabular}
+\end{center}
+The thresholds are operational choices for this project, not universal statistical standards. The antecedent-count floor limits conclusions based on very few relevant orders. A rule is marked evaluable when its antecedent occurs at least 20 times and its consequent appears in the month. If the antecedent is absent, confidence is undefined; if either marginal is zero, lift is undefined. Such cases remain in the frozen cohort and are recorded separately rather than silently removed or converted to numerical zero.
+
+For frozen discovery cohort $R$, let $I_t(r)$ equal one when all monthly requirements hold. Define
+\begin{equation}
+\operatorname{Retention}_t=\frac{\sum_{r\in R}I_t(r)}{|R|},\qquad
+\operatorname{Coverage}_t=\frac{\#\{r\in R:r\text{ is evaluable in }t\}}{|R|}.
+\end{equation}
+Conditional retention uses the evaluable subset as its denominator and is reported separately. The primary retention measure therefore captures both adequate observation and criterion satisfaction; it is not a pure estimate of behavioral change. A rule's persistence score is the number of held-out months in which it is retained, from zero to four. The mean monthly rate weights the four months equally; here it also equals the retained fraction of all rule-months because the cohort size is constant.
+For nonzero coverage, these definitions give the exact decomposition
+\begin{equation}
+\operatorname{Retention}_t
+=\operatorname{Coverage}_t\,
+\operatorname{ConditionalRetention}_t.
+\label{eq:decomposition}
+\end{equation}
+This identity also holds for pooled counts, but not generally for the product of unweighted monthly means. It separates an evidence-availability problem from failure of the observed association to meet the declared requirements.
+
+\subsection{Consequences of finite monthly counts}
+The support and confidence gates imply the integer-count requirement
+\begin{equation}
+n_t(A\cup B)\geq
+\max\!\left\{\left\lceil0.005N_t\right\rceil,\,
+\left\lceil0.50n_t(A)\right\rceil\right\}.
+\end{equation}
+The lift and evaluability gates must also hold. In August, support alone requires at least six joint orders; in November it requires 13. At the minimum antecedent count of 20, confidence requires at least ten joint orders. The antecedent floor itself corresponds to 1.67\% of August orders but 0.81\% of November orders. These are consequences of the same policy applied at different monthly volumes, not month-specific tuning. A rule frequent over six pooled months need not supply adequate evidence in each later month, so low coverage alone does not establish behavioral drift.
+
